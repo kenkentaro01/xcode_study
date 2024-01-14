@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		967A13682B542DF000858048 /* kentaro_nagataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A13672B542DF000858048 /* kentaro_nagataApp.swift */; };
+		967A136A2B542DF000858048 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A13692B542DF000858048 /* ContentView.swift */; };
+		967A136C2B542DF000858048 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A136B2B542DF000858048 /* Item.swift */; };
+		967A136E2B542DF300858048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967A136D2B542DF300858048 /* Assets.xcassets */; };
+		967A13712B542DF400858048 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967A13702B542DF400858048 /* Preview Assets.xcassets */; };
+		967A137B2B542DF400858048 /* kentaro_nagataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A137A2B542DF400858048 /* kentaro_nagataTests.swift */; };
+		967A13852B542DF400858048 /* kentaro_nagataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A13842B542DF400858048 /* kentaro_nagataUITests.swift */; };
+		967A13872B542DF400858048 /* kentaro_nagataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A13862B542DF400858048 /* kentaro_nagataUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		967A13772B542DF400858048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 967A135C2B542DF000858048 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 967A13632B542DF000858048;
+			remoteInfo = "kentaro nagata";
+		};
+		967A13812B542DF400858048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 967A135C2B542DF000858048 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 967A13632B542DF000858048;
+			remoteInfo = "kentaro nagata";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		967A13642B542DF000858048 /* kentaro nagata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kentaro nagata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		967A13672B542DF000858048 /* kentaro_nagataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kentaro_nagataApp.swift; sourceTree = "<group>"; };
+		967A13692B542DF000858048 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		967A136B2B542DF000858048 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		967A136D2B542DF300858048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		967A13702B542DF400858048 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		967A13762B542DF400858048 /* kentaro nagataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kentaro nagataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		967A137A2B542DF400858048 /* kentaro_nagataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kentaro_nagataTests.swift; sourceTree = "<group>"; };
+		967A13802B542DF400858048 /* kentaro nagataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kentaro nagataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		967A13842B542DF400858048 /* kentaro_nagataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kentaro_nagataUITests.swift; sourceTree = "<group>"; };
+		967A13862B542DF400858048 /* kentaro_nagataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kentaro_nagataUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		967A13612B542DF000858048 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967A13732B542DF400858048 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967A137D2B542DF400858048 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		967A135B2B542DF000858048 = {
+			isa = PBXGroup;
+			children = (
+				967A13662B542DF000858048 /* kentaro nagata */,
+				967A13792B542DF400858048 /* kentaro nagataTests */,
+				967A13832B542DF400858048 /* kentaro nagataUITests */,
+				967A13652B542DF000858048 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		967A13652B542DF000858048 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				967A13642B542DF000858048 /* kentaro nagata.app */,
+				967A13762B542DF400858048 /* kentaro nagataTests.xctest */,
+				967A13802B542DF400858048 /* kentaro nagataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		967A13662B542DF000858048 /* kentaro nagata */ = {
+			isa = PBXGroup;
+			children = (
+				967A13672B542DF000858048 /* kentaro_nagataApp.swift */,
+				967A13692B542DF000858048 /* ContentView.swift */,
+				967A136B2B542DF000858048 /* Item.swift */,
+				967A136D2B542DF300858048 /* Assets.xcassets */,
+				967A136F2B542DF400858048 /* Preview Content */,
+			);
+			path = "kentaro nagata";
+			sourceTree = "<group>";
+		};
+		967A136F2B542DF400858048 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				967A13702B542DF400858048 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		967A13792B542DF400858048 /* kentaro nagataTests */ = {
+			isa = PBXGroup;
+			children = (
+				967A137A2B542DF400858048 /* kentaro_nagataTests.swift */,
+			);
+			path = "kentaro nagataTests";
+			sourceTree = "<group>";
+		};
+		967A13832B542DF400858048 /* kentaro nagataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				967A13842B542DF400858048 /* kentaro_nagataUITests.swift */,
+				967A13862B542DF400858048 /* kentaro_nagataUITestsLaunchTests.swift */,
+			);
+			path = "kentaro nagataUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		967A13632B542DF000858048 /* kentaro nagata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 967A138A2B542DF400858048 /* Build configuration list for PBXNativeTarget "kentaro nagata" */;
+			buildPhases = (
+				967A13602B542DF000858048 /* Sources */,
+				967A13612B542DF000858048 /* Frameworks */,
+				967A13622B542DF000858048 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kentaro nagata";
+			productName = "kentaro nagata";
+			productReference = 967A13642B542DF000858048 /* kentaro nagata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		967A13752B542DF400858048 /* kentaro nagataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 967A138D2B542DF400858048 /* Build configuration list for PBXNativeTarget "kentaro nagataTests" */;
+			buildPhases = (
+				967A13722B542DF400858048 /* Sources */,
+				967A13732B542DF400858048 /* Frameworks */,
+				967A13742B542DF400858048 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				967A13782B542DF400858048 /* PBXTargetDependency */,
+			);
+			name = "kentaro nagataTests";
+			productName = "kentaro nagataTests";
+			productReference = 967A13762B542DF400858048 /* kentaro nagataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		967A137F2B542DF400858048 /* kentaro nagataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 967A13902B542DF400858048 /* Build configuration list for PBXNativeTarget "kentaro nagataUITests" */;
+			buildPhases = (
+				967A137C2B542DF400858048 /* Sources */,
+				967A137D2B542DF400858048 /* Frameworks */,
+				967A137E2B542DF400858048 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				967A13822B542DF400858048 /* PBXTargetDependency */,
+			);
+			name = "kentaro nagataUITests";
+			productName = "kentaro nagataUITests";
+			productReference = 967A13802B542DF400858048 /* kentaro nagataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		967A135C2B542DF000858048 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					967A13632B542DF000858048 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					967A13752B542DF400858048 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 967A13632B542DF000858048;
+					};
+					967A137F2B542DF400858048 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 967A13632B542DF000858048;
+					};
+				};
+			};
+			buildConfigurationList = 967A135F2B542DF000858048 /* Build configuration list for PBXProject "kentaro nagata" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 967A135B2B542DF000858048;
+			productRefGroup = 967A13652B542DF000858048 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				967A13632B542DF000858048 /* kentaro nagata */,
+				967A13752B542DF400858048 /* kentaro nagataTests */,
+				967A137F2B542DF400858048 /* kentaro nagataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		967A13622B542DF000858048 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967A13712B542DF400858048 /* Preview Assets.xcassets in Resources */,
+				967A136E2B542DF300858048 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967A13742B542DF400858048 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967A137E2B542DF400858048 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		967A13602B542DF000858048 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967A136A2B542DF000858048 /* ContentView.swift in Sources */,
+				967A136C2B542DF000858048 /* Item.swift in Sources */,
+				967A13682B542DF000858048 /* kentaro_nagataApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967A13722B542DF400858048 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967A137B2B542DF400858048 /* kentaro_nagataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967A137C2B542DF400858048 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967A13852B542DF400858048 /* kentaro_nagataUITests.swift in Sources */,
+				967A13872B542DF400858048 /* kentaro_nagataUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		967A13782B542DF400858048 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 967A13632B542DF000858048 /* kentaro nagata */;
+			targetProxy = 967A13772B542DF400858048 /* PBXContainerItemProxy */;
+		};
+		967A13822B542DF400858048 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 967A13632B542DF000858048 /* kentaro nagata */;
+			targetProxy = 967A13812B542DF400858048 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		967A13882B542DF400858048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		967A13892B542DF400858048 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		967A138B2B542DF400858048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kentaro nagata/Preview Content\"";
+				DEVELOPMENT_TEAM = 24JKPA5A64;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kentaro-nagata.kentaro-nagata";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		967A138C2B542DF400858048 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kentaro nagata/Preview Content\"";
+				DEVELOPMENT_TEAM = 24JKPA5A64;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kentaro-nagata.kentaro-nagata";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		967A138E2B542DF400858048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JKPA5A64;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kentaro-nagata.kentaro-nagataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kentaro nagata.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kentaro nagata";
+			};
+			name = Debug;
+		};
+		967A138F2B542DF400858048 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JKPA5A64;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kentaro-nagata.kentaro-nagataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kentaro nagata.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kentaro nagata";
+			};
+			name = Release;
+		};
+		967A13912B542DF400858048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JKPA5A64;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kentaro-nagata.kentaro-nagataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kentaro nagata";
+			};
+			name = Debug;
+		};
+		967A13922B542DF400858048 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JKPA5A64;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kentaro-nagata.kentaro-nagataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kentaro nagata";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		967A135F2B542DF000858048 /* Build configuration list for PBXProject "kentaro nagata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967A13882B542DF400858048 /* Debug */,
+				967A13892B542DF400858048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		967A138A2B542DF400858048 /* Build configuration list for PBXNativeTarget "kentaro nagata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967A138B2B542DF400858048 /* Debug */,
+				967A138C2B542DF400858048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		967A138D2B542DF400858048 /* Build configuration list for PBXNativeTarget "kentaro nagataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967A138E2B542DF400858048 /* Debug */,
+				967A138F2B542DF400858048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		967A13902B542DF400858048 /* Build configuration list for PBXNativeTarget "kentaro nagataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967A13912B542DF400858048 /* Debug */,
+				967A13922B542DF400858048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 967A135C2B542DF000858048 /* Project object */;
+}
