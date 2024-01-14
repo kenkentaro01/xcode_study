@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+//    変数の指定
+    @State var outputText = "Hello,world!"
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(outputText)
+                .font(.largeTitle)
+//      ボタンの追加
+            Button("切り替えボタン") {
+                outputText = "Hi,Swift!"
+            }
+            .padding(.all)
+            .background(.blue)
+            .foregroundColor(.white)
         }
-        .padding()
     }
 }
 
