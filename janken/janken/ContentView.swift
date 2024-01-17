@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var jankenNumber = 0
     var body: some View {
         VStack {
+//            スペース追加
+            Spacer()
             if jankenNumber == 0 {
 //                初期画面のテキストを表示
                 Text("これからじゃんけんをします。")
@@ -25,8 +27,11 @@ struct ContentView: View {
                     .resizable()
                 //        アスペクト比を保ったまま画面いっぱいに表示
                     .scaledToFit()
+                Spacer()
     //            じゃんけんの種類指定
                 Text("ぐー")
+                //                下辺に余白を設定
+                    .padding(.bottom, 20.0)
                 
             } else if jankenNumber == 2{
 //                 じゃんけんの数字が２だったらチョキ画像を指定
@@ -35,8 +40,11 @@ struct ContentView: View {
                     .resizable()
                 //        アスペクト比を保ったまま画面いっぱいに表示
                     .scaledToFit()
+                Spacer()
     //            じゃんけんの種類指定
                 Text("ちょき")
+                //                下辺に余白を設定
+                    .padding(.bottom, 20.0)
                 
             } else{
 //                じゃんけんが1,2以外ならパー
@@ -45,9 +53,11 @@ struct ContentView: View {
                     .resizable()
                 //        アスペクト比を保ったまま画面いっぱいに表示
                     .scaledToFit()
+                Spacer()
     //            じゃんけんの種類指定
                 Text("パー")
-                
+                //                下辺に余白を設定
+                    .padding(.bottom, 20.0)
             }//ifココまで
 
             Button(action: {
