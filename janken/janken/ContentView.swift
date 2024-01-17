@@ -15,6 +15,9 @@ struct ContentView: View {
             if jankenNumber == 0 {
 //                初期画面のテキストを表示
                 Text("これからじゃんけんをします。")
+//                下辺に余白を設定
+                    .padding(.bottom, 20.0)
+
             } else if jankenNumber == 1{
 //                じゃんけんの数字が１だったらグー画像を指定
                 //グー画像の指定
@@ -65,7 +68,11 @@ struct ContentView: View {
             }, label: {
 //                buttonに表示する文字を指定
                 Text("じゃんけんをする！")
-                
+                    .frame(maxWidth: .infinity)
+                    .frame(height:100)
+                    .font(.title)
+                    .background(.pink)
+                    .foregroundColor(.white)
             })
         }
 
