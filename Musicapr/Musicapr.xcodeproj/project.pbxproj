@@ -12,6 +12,7 @@
 		96C2170B2B580CFB009F2085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C2170A2B580CFB009F2085 /* Assets.xcassets */; };
 		96C2170E2B580CFB009F2085 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C2170D2B580CFB009F2085 /* Preview Assets.xcassets */; };
 		96C217152B5818A1009F2085 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C217142B5818A1009F2085 /* SoundPlayer.swift */; };
+		96C217172B5AB7D2009F2085 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C217162B5AB7D2009F2085 /* BackgroundModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		96C2170A2B580CFB009F2085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96C2170D2B580CFB009F2085 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96C217142B5818A1009F2085 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		96C217162B5AB7D2009F2085 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				96C217062B580CF8009F2085 /* MusicaprApp.swift */,
 				96C217082B580CF8009F2085 /* ContentView.swift */,
+				96C217162B5AB7D2009F2085 /* BackgroundModifier.swift */,
 				96C217142B5818A1009F2085 /* SoundPlayer.swift */,
 				96C2170A2B580CFB009F2085 /* Assets.xcassets */,
 				96C2170C2B580CFB009F2085 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				96C217092B580CF8009F2085 /* ContentView.swift in Sources */,
 				96C217152B5818A1009F2085 /* SoundPlayer.swift in Sources */,
+				96C217172B5AB7D2009F2085 /* BackgroundModifier.swift in Sources */,
 				96C217072B580CF8009F2085 /* MusicaprApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

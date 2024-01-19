@@ -14,11 +14,12 @@ struct ContentView: View {
         ZStack {
 //            背景画面の指定
             Image(.background)
+                .backgroundModifier()
             
-                .resizable()
-//            セーフエリア外にまで表示されるようにしてい
-                .ignoresSafeArea()
-                .scaledToFill()
+//                .resizable()
+////            セーフエリア外にまで表示されるようにしてい
+//                .ignoresSafeArea()
+//                .scaledToFill()
             HStack{
 //                シンバルボタン
                 Button{
