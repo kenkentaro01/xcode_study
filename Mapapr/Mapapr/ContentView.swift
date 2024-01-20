@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+//垂直にレイアウト
+        VStack{
+//            マップを表示
+            MapView(searchKey: "羽田空港")
         }
-        .padding()
     }
 }
 

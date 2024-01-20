@@ -1,4 +1,5 @@
-//SwiftUIViewを選択することで
+////SwiftUIViewを選択することで「import SwiftUI
+//」の記述が追加されたswiftファイルが作成される。
 //  SwiftUIView.swift
 //  Mapapr
 //
@@ -6,13 +7,29 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct SwiftUIView: View {
+struct MapView: View {
+//    検索キーワードを保存するための定数
+    let searchKey: String
+//    キーワードから取得した緯度経度
+//    CLLocationCoordinate2Dは緯度経度の情報を格納できるデータ型
+    @State var targetCordinate = CLLocationCoordinate2D()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Map(){
+        }
+//        検索キーワドの変更を検知
+//        onChangeとはof(引数ラベル)で指定されている値が変更された時に処理を実行する
+//    initial : TrueになっていることでViewが最初に表示されたときにactionが実行される
+//        newValueは変更後の値
+        .onChange(of: searchKey, initial: true) { oldValue, newValue in
+//            入力されたキー/*ワードをデバッグエリアに表示*/
+            print("検索キーワード:\(newValue)")
+        }
     }
 }
 
 #Preview {
-    SwiftUIView()
+//    searchKeyの初期値
+    MapView(searchKey:"東京")
 }
