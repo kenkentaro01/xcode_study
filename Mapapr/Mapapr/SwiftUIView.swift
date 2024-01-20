@@ -25,11 +25,41 @@ struct MapView: View {
         .onChange(of: searchKey, initial: true) { oldValue, newValue in
 //            入力されたキー/*ワードをデバッグエリアに表示*/
             print("検索キーワード:\(newValue)")
+            
+//            地図の検索クエリの作成
+            let request = MKLocalSearch.Request()
+
+//            検索クエリにキーワードを設定
+//naturalLanguageQueryプロパティは検索したい文字列をセットします。
+            request.naturalLanguageQuery=newValue
+            
+//MKLocalSearchの初期化
+            let search = MKLocalSearch(request: request)
+            
+//検索の開始
+//            位置情報が取得できた時、inからの処理が実行される
+            search.start{
+                response,error in
+                print("response\(response?.mapItems)")
+//結果が存在する時は1件目を取り出す
+//                キーワード検索では一つの場所を特定できない場合複数の位置情報がAppleのサーバから送られて黒木があるため以下のような処理を行っている
+//                下記の処理はresponseの値をアンラップして一つずつmapItemに渡している。おそらく変数mapItemsに「？」のオプショナル型を指定する値がついていないためnillだけ省いたものだけが渡されるのではないか？
+                if let mapItems = response?.mapItems,
+                     
+                   let mapItem = mapItems.first{
+//                    位置情報から緯度経度をtargetCordinateに取り出す
+                    targetCordinate = mapItem.placemark.coordinate
+//                    緯度経度をデバッグに出力
+                    print("緯度経度:\(targetCordinate)")
+//                  出力結果は
+//                緯度経度:CLLocationCoordinate2D(latitude: 35.689506, longitude: 139.6917)
+                }
+            }
         }
     }
 }
 
 #Preview {
 //    searchKeyの初期値
-    MapView(searchKey:"東京")
+    MapView(searchKey:"鳥貴族")
 }
