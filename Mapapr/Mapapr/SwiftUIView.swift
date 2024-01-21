@@ -9,9 +9,22 @@
 import SwiftUI
 import MapKit
 
+//enumは列挙型
+    //case文で使用したいパターンを宣言します。列挙型を宣言しておくことでマップの種類を選びやすく且つ設定しやすくなる。enumは設定する候補が決まっているときに使うと便利。
+    //メリット: コードを入力するときに入力補完が働く
+//struct MapViewの上に記述することで、ContentViewとMapView内で利用することができる。
+enum MapType{
+    case standard //標準
+    case satellite //衛生写真
+    case hybrid //衛生写真+交通機関ラベル
+}
+
 struct MapView: View {
 //    検索キーワードを保存するための定数
     let searchKey: String
+    
+//    マップの種類
+    let mapType:MapType
 //    キーワードから取得した緯度経度
 //    CLLocationCoordinate2Dは緯度経度の情報を格納できるデータ型
     @State var targetCordinate = CLLocationCoordinate2D()
@@ -19,6 +32,19 @@ struct MapView: View {
 //    表示するマップの位置
 //MapCameraPositionはマップ内のカメラ位置を記述する構造体です。
     @State var cameraPosition: MapCameraPosition = .automatic
+    
+//    表示するマップのスタイル
+//    計算型プロパティ:処理を実施してから値が決定するプロパティのこと
+    var mapStyle : MapStyle{
+        switch mapType {
+        case .standard:
+            return MapStyle.standard()
+        case .satellite:
+            return MapStyle.imagery()
+        case .hybrid:
+            return MapStyle.hybrid()
+        }
+    }
     var body: some View {
 //        引数positionによりカメラの位置を指定することができる。
         Map(position: $cameraPosition
@@ -27,6 +53,8 @@ struct MapView: View {
 //coordinatenの引数は緯度経度を渡している
             Marker(searchKey,coordinate: targetCordinate)
         }
+//        マップのスタイルを指定
+        .mapStyle(mapStyle)
 //        検索キーワドの変更を検知
 //        onChangeとはof(引数ラベル)で指定されている値が変更された時に処理を実行する
 //    initial : TrueになっていることでViewが最初に表示されたときにactionが実行される
@@ -79,5 +107,5 @@ struct MapView: View {
 
 #Preview {
 //    searchKeyの初期値
-    MapView(searchKey:"東京駅")
+    MapView(searchKey:"東京駅",mapType: .standard)
 }
