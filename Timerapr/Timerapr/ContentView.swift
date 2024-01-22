@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+//    タイマーの変数を作成
+    @State var timeHandler: Timer?
+//    カウントの変数を作成
+    @State var count = 0
+    
+//    永続化する秒数設定
+//    Userdefaultはアプリで使用する値を保存する機能
+//    アプリを停止して再度起動させたときにUserdefaultsを利用して保存していた値を利用
+//    「データの永続化」＝データを保存して復元できるようにすること
+    @AppStorage("timer_value") var timerValue = 10
+    
     var body: some View {
 //        NavigationStackにより先頭の画面ということを宣言している
         NavigationStack{
@@ -65,6 +76,16 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+    }
+    func countDownTimer(){
+//        経過時間に+1していく
+        count += 1
+        
+//        残り時間が0以下の時タイマーを止める
+        if timerValue - count <= 0{
+//            タイマー停止
+            timeHandler?.invalidate()
         }
     }
 }
