@@ -19,6 +19,11 @@ struct ContentView: View {
 //    「データの永続化」＝データを保存して復元できるようにすること
     @AppStorage("timer_value") var timerValue = 10
     
+//    アラート表示有無
+//    初期値は非表示を意味するfalseを設定
+    @State var showAlert = false
+    
+    
     var body: some View {
 //        NavigationStackにより先頭の画面ということを宣言している
         NavigationStack{
@@ -90,6 +95,16 @@ struct ContentView: View {
                     }
                 }
             }
+//            状態変数showAlertがtrueになったときに実行される
+//            isPresentedで指定されたBool値をfalseに変更してアラートを終了します。
+            .alert("終了",isPresented: $showAlert){
+                Button("わーい"){
+//                    Okをタップしたときに実行される
+                    print("OKがタップされました。")
+                }
+            }message: {
+                Text("タイマー終了時間です")
+            }
         }
     }
     func countDownTimer(){
@@ -100,6 +115,9 @@ struct ContentView: View {
         if timerValue - count <= 0{
 //            タイマー停止
             timerHandler?.invalidate()
+            
+//            アラートを表示する
+            showAlert = true
         }
     }
 //    タイマーをカウントダウン開始する関数
