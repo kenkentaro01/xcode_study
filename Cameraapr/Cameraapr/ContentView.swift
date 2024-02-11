@@ -19,22 +19,25 @@ struct ContentView: View {
     @State var photoPickerSelectedImage: PhotosPickerItem? = nil
     var body: some View {
         VStack {
+//            撮影された画面をエフェクト編集画面に表示するため削除する
 //スペースの追加
-            Spacer()
-//            撮影した写真がある時
-            if let captureImage{
-//                撮影写真を表示
-//                Imageは画像を表示するためのViewを作成する
-                Image(uiImage: captureImage)
-                .resizable()
-                .scaledToFit()
-            }
+//            Spacer()
+////            撮影した写真がある時
+//            if let captureImage{
+////                撮影写真を表示
+////                Imageは画像を表示するためのViewを作成する
+//                Image(uiImage: captureImage)
+//                .resizable()
+//                .scaledToFit()
+//            }
 //            カメラを起動するボタン
             Button{
 //                ボタンをタップしたときのアクション
 //                カメラが利用可能かチェック
                 if UIImagePickerController.isSourceTypeAvailable(.camera){
                     print("カメラは使用できます")
+//                    撮影写真を初期化する
+                    captureImage = nil
 //                    カメラが使えるならisShowSheetをtrue
 //                    togleメソッドによりtrue falseを切り替えることができる
                     isShowSheet.toggle()
@@ -59,8 +62,15 @@ struct ContentView: View {
 //            sheetを表示
 //            isPresentedで指定した状態変数がtrueの時実行
             .sheet(isPresented: $isShowSheet){
-//                UIImagePickerControllerを表示
-                ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                if let captureImage{
+//                    撮影した写真がある場合はエフェクト画面を表示する
+//                    アンラップに成功したもの=nillでない値が取り出せた場合
+//                    撮影した写真を利用しないため「＄」がついていない
+                    EfectView(isShowSheet: $isShowSheet, captureImage: captureImage)
+                } else{
+    //                UIImagePickerControllerを表示
+                    ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                }
             }
 //            フォトライブラリーから選択する
 //            第二引数　.imagesとすることで静止画のみとなる
@@ -94,23 +104,31 @@ struct ContentView: View {
                         }}
                 }
             })
-            if let captureImage{
-                let shareImage = Image(uiImage: captureImage)
-//                共有シート
-//                第一引数:共有するコンテンツ　第二引数:共有する時の件名　第三引数:共有する時の本文
-                ShareLink(item: shareImage, subject:nil, message: nil, preview: SharePreview("Photo",image: shareImage)){
-//                    テキストに表示
-                    Text("SNSに投稿する")
-//                    横幅いっぱい
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .frame(height: 50)
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
-                    .padding()
-                }
-            }
+//            エフェクト後にシェアできるように下記のコードを削除する
+//            if let captureImage{
+//                let shareImage = Image(uiImage: captureImage)
+////                共有シート
+////                第一引数:共有するコンテンツ　第二引数:共有する時の件名　第三引数:共有する時の本文
+//                ShareLink(item: shareImage, subject:nil, message: nil, preview: SharePreview("Photo",image: shareImage)){
+////                    テキストに表示
+//                    Text("SNSに投稿する")
+////                    横幅いっぱい
+//                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+//                    .frame(height: 50)
+//                    .background(Color.blue)
+//                    .foregroundColor(Color.white)
+//                    .padding()
+//                }
+//            }
         }
-
+//撮影した写真を保持する状態変数が変化したら実行する
+        .onChange(of: captureImage, initial: true,{
+            oldValue,newValue in
+            if let _ = newValue{
+//                撮影した写真がある　→EffectViewを表示する
+                isShowSheet.toggle()
+            }
+        })
     }
 }
 

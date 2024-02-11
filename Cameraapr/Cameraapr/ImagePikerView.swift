@@ -31,12 +31,16 @@ struct ImagePickerView: UIViewControllerRepresentable {
 //        撮影が終わったときに呼ばれるdelegateメソッド　必ず必要
 //        第一引数カメラ撮影を行う画面　第二引数　撮影した写真の情報を格納する
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//            撮影した写真をcaptureImageに保存
-//            UIImagePickerController.InfoKey.originalImageを指定することでカメラで撮影した写真が取得できる。
-//            Any型についていろんなデータが格納できる。 「いろんな」→int stringでも入る
-//            as? UIImageにより「Any」→「UIImage」へ型を変換している　これをダウンキャストという
-            if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-                parent.captureImage = originalImage
+//            UIImagePickerContorollerを閉じる　isshowsheetがfalseになる
+//            画面を閉じたときに{}内が実行される
+            picker.dismiss(animated: true){
+                //            撮影した写真をcaptureImageに保存
+                //            UIImagePickerController.InfoKey.originalImageを指定することでカメラで撮影した写真が取得できる。
+                //            Any型についていろんなデータが格納できる。 「いろんな」→int stringでも入る
+                //            as? UIImageにより「Any」→「UIImage」へ型を変換している　これをダウンキャストという
+                if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+                    self.parent.captureImage = originalImage
+                }
             }
 //            sheetを閉じる
             parent.isShowSheet.toggle()
