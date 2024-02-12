@@ -16,6 +16,30 @@ struct EfectView: View {
     //        表示する写真
 //    編集後の写真を保存しておく
             @State var showImage : UIImage?
+    
+//    フィルタ名を列挙した配列
+//    0.モノクロ
+//    1.chrine
+//    2.Fade
+//    3.Instant
+//    4.Noir
+//    5.process
+//    6.Tonal
+//    7.transfer
+//    8.sepiatone
+    let filterArray = [
+    "CIPhotoEffectMono",
+    "CIPhotoEffectChrome",
+    "CIPhotoEffectFade",
+    "CIPhotoEffectInstant",
+    "CIPhotoEffectNoir",
+    "CIPhotoEffectProcess",
+    "CIPhotoEffectTonal",
+    "CIPhotoEffectTransfer",
+    "CISepiaTone"]
+//    洗濯中のエフェクト
+    @State var filterSelectNumber = 0
+    
     var body: some View {
 //        縦方向にレイアウト
         VStack{
@@ -31,7 +55,13 @@ struct EfectView: View {
             Button{
 //                ボタンをタップした時のアクション
 //                フィルタ名を指定
-                let filterName = "CIPhotoEffectMono"
+                let filterName = filterArray[filterSelectNumber]
+//                次回に適応するフィルタを決める
+                filterSelectNumber += 1
+//                最後のフィルタまで適応した場合
+                if filterSelectNumber == filterArray.count{
+                    filterSelectNumber = 0
+                }
 //                元々の画像の回転角度を取得
 //                CoreImageで使えるデータ型に変換する際に、画像の回転角度の情報は失われてしまうため保存しておく。
                 let rotate = captureImage.imageOrientation
@@ -73,7 +103,7 @@ struct EfectView: View {
             }
             .padding()
             
-            if let showImage{
+            if let showImage = showImage?.resized(){
                 let shareImage = Image(uiImage: showImage)
 //                共有シート
                 ShareLink(item:shareImage,subject: nil,message: nil,preview: SharePreview("Photo",image: shareImage)){

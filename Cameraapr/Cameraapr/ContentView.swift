@@ -62,7 +62,7 @@ struct ContentView: View {
 //            sheetを表示
 //            isPresentedで指定した状態変数がtrueの時実行
             .sheet(isPresented: $isShowSheet){
-                if let captureImage{
+                if let captureImage = captureImage?.resized(){
 //                    撮影した写真がある場合はエフェクト画面を表示する
 //                    アンラップに成功したもの=nillでない値が取り出せた場合
 //                    撮影した写真を利用しないため「＄」がついていない
