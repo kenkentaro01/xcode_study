@@ -12,6 +12,9 @@ struct ContentView: View {
     var OkashiDataList = OkashiData()
 //    入力された文字列を保持する状態変数
     @State var  inputText = ""
+//    safariViewの表示有無を管理する変数
+//    非表示のためのfalse
+    @State var isShowSfari = false
     var body: some View {
         VStack{
 //            文字を受け取るTextfieldを表示する
@@ -32,26 +35,39 @@ struct ContentView: View {
 //            リストを表示する
             List(OkashiDataList.okashiList){okashi in
 //                一つ一つの要素を取り出す
-//                Listの表示内容を生成する
-//                水平にレイアウト
-                HStack{
-//                    画像の読み込み、表示をする
-//                    AsyncImageは画像を非同期で読み込むことができ、読み込み中も別の処理をすることができます。
-//                    読み込みが完了するまで読み込み中の画像を表示することができる
-                    AsyncImage(url: okashi.image){image in
-//                        画像を用事する
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height:40)
-                    }placeholder: {
-//                        読み込み中はインジケータを表示する
-                        ProgressView()
-                        }
-//                    テキストを表示する
-                    Text(okashi.name)
-                    }
+//                ボタンを用意する
+                Button{
+//                   選択したリンクを保存する
+                    OkashiDataList.okashiLink = okashi.link
+//                    safariViewを表示する
+                    isShowSfari.toggle()
+                }label: {
+                    //                Listの表示内容を生成する
+                    //                水平にレイアウト
+                                    HStack{
+                    //                    画像の読み込み、表示をする
+                    //                    AsyncImageは画像を非同期で読み込むことができ、読み込み中も別の処理をすることができます。
+                    //                    読み込みが完了するまで読み込み中の画像を表示することができる
+                                        AsyncImage(url: okashi.image){image in
+                    //                        画像を用事する
+                                            image
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(height:40)
+                                        }placeholder: {
+                    //                        読み込み中はインジケータを表示する
+                                            ProgressView()
+                                            }
+                    //                    テキストを表示する
+                                        Text(okashi.name)
+                                        }
                 }
+                }
+            .sheet(isPresented: $isShowSfari,content: {
+//                safariviewを表示する
+                SafariView(url:OkashiDataList.okashiLink!)
+                    .ignoresSafeArea(edges: [.bottom])
+            })
             }
         }
     }

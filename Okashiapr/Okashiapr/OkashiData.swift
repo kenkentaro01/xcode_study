@@ -37,6 +37,9 @@ struct OkashiItem: Identifiable{
 //    お菓子のリスト
 //    以下の書き方により構造体を複数保持することができる
     var okashiList: [OkashiItem] = []
+//    クリックされたwebページのURL情報
+//    クリックされるまでは変数の値は何もない状態なのでオプショナル変数で定義
+    var okashiLink: URL?
         //    WebAPI検索用メソッド　第一引数:keyword 検索したいワード
             func searchOkashi(keyword:String){
         //        デバッグエリアに出力
